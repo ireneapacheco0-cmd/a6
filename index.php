@@ -24,7 +24,7 @@
       gtag('config', 'G-0LY0HY7L01');
     </script>
     <style>
-        /* Extra custom styles for pure image hero showcase */
+        /* Extra custom styles for pure image hero showcase & new sections */
         .hero-images-only {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -49,6 +49,83 @@
         .hero-img-item:hover img {
             transform: scale(1.05);
         }
+
+        /* Methodology Section */
+        .cognitive-methodology {
+            padding: 100px 0;
+            background: var(--white-color);
+            border-bottom: 1px solid var(--border-color);
+        }
+        .methodology-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px;
+        }
+        .methodology-card {
+            background: var(--bg-color);
+            border: 1px solid var(--border-color);
+            padding: 30px;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+        .methodology-card:hover {
+            border-color: var(--accent-ochre);
+            transform: translateY(-3px);
+        }
+        .methodology-card h4 {
+            font-family: var(--font-serif);
+            font-size: 20px;
+            color: var(--accent-color);
+            margin-bottom: 10px;
+        }
+        .methodology-card p {
+            font-size: 14px;
+            margin: 0;
+            opacity: 0.8;
+        }
+        
+        /* Testimonials Section */
+        .testimonials-section {
+            padding: 100px 0;
+            background: var(--bg-color);
+            border-bottom: 1px solid var(--border-color);
+        }
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+        .testimonial-card {
+            background: var(--white-color);
+            border: 1px solid var(--border-color);
+            padding: 40px;
+            border-radius: 4px;
+            position: relative;
+        }
+        .testimonial-card p {
+            font-size: 15px;
+            font-style: italic;
+            margin-bottom: 25px;
+            line-height: 1.7;
+        }
+        .testimonial-author {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid var(--border-color);
+            padding-top: 15px;
+        }
+        .testimonial-author h5 {
+            font-family: var(--font-serif);
+            font-size: 16px;
+            color: var(--accent-color);
+            margin: 0;
+        }
+        .testimonial-author span {
+            font-size: 12px;
+            color: var(--accent-ochre);
+            font-weight: 700;
+        }
         
         @media (max-width: 992px) {
             .hero-images-only {
@@ -57,6 +134,12 @@
             }
             .hero-img-item {
                 height: 350px;
+            }
+            .methodology-grid {
+                grid-template-columns: 1fr;
+            }
+            .testimonials-grid {
+                grid-template-columns: 1fr;
             }
         }
     </style>
@@ -154,6 +237,40 @@
     </section>
     <!-- Academic Pillars End -->
 
+    <!-- New Section A: The Cognitive Methodology Start -->
+    <section class="cognitive-methodology">
+        <div class="container">
+            <div class="section-title" data-reveal>
+                <span>Methodology Lab</span>
+                <h2>Study Methods & Calibration</h2>
+            </div>
+            
+            <div class="methodology-grid">
+                <!-- Method 1 -->
+                <div class="methodology-card" data-reveal="zoom">
+                    <h4>Pomodoro Spacing</h4>
+                    <p>Standardizing study cycles to forty-five minutes followed by ten minutes of screen-free eye rest.</p>
+                </div>
+                <!-- Method 2 -->
+                <div class="methodology-card" data-reveal="zoom">
+                    <h4>Active Recall Slots</h4>
+                    <p>Integrating blank review panels into desks to write quick memory summaries before closed books.</p>
+                </div>
+                <!-- Method 3 -->
+                <div class="methodology-card" data-reveal="zoom">
+                    <h4>Cornell Grid Layouts</h4>
+                    <p>Sizing study pad margins to segment main notes, cue keywords, and bottom summaries cleanly.</p>
+                </div>
+                <!-- Method 4 -->
+                <div class="methodology-card" data-reveal="zoom">
+                    <h4>Dual Coding Zones</h4>
+                    <p>Designing double board tracks to place visual diagrams side-by-side with written text arguments.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- New Section A End -->
+
     <!-- Study Stations Section Start (Circular Highlight Cards & Image Section 3) -->
     <section class="stations-section">
         <div class="container">
@@ -193,6 +310,44 @@
         </div>
     </section>
     <!-- Study Stations Section End -->
+
+    <!-- New Section B: Student & Researcher Reviews Start -->
+    <section class="testimonials-section">
+        <div class="container">
+            <div class="section-title" data-reveal>
+                <span>User Evaluation</span>
+                <h2>Atelier Space Reviews</h2>
+            </div>
+            
+            <div class="testimonials-grid">
+                <!-- Card 1 -->
+                <div class="testimonial-card" data-reveal="zoom">
+                    <p>"The private study cubicles completely block visual hallway noises. I managed a six-hour research shift without checking my phone once."</p>
+                    <div class="testimonial-author">
+                        <h5>Iris Sterling</h5>
+                        <span>Thesis Researcher</span>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="testimonial-card" data-reveal="zoom">
+                    <p>"Felt noise panels and angled writing boards have saved my wrist fatigue during long essay drafts. The CRI90 lighting distribution is flawless."</p>
+                    <div class="testimonial-author">
+                        <h5>Marcus Kinsley</h5>
+                        <span>Academic Fellow</span>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="testimonial-card" data-reveal="zoom">
+                    <p>"Under-desk clearances are calculated perfectly. My legs have ample room, and the soft-close drawers store all my research indexes cleanly."</p>
+                    <div class="testimonial-author">
+                        <h5>Elena Rostova</h5>
+                        <span>History Student</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- New Section B End -->
 
     <!-- Learning Metrics Section Start -->
     <section class="metrics-section">
