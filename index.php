@@ -23,6 +23,43 @@
 
       gtag('config', 'G-0LY0HY7L01');
     </script>
+    <style>
+        /* Extra custom styles for pure image hero showcase */
+        .hero-images-only {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            padding: 15px;
+            background: var(--white-color);
+            border-bottom: 1px solid var(--border-color);
+        }
+        .hero-img-item {
+            height: 580px;
+            overflow: hidden;
+            border-radius: 4px;
+            border: 1px solid var(--border-color);
+            position: relative;
+        }
+        .hero-img-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.8s ease;
+        }
+        .hero-img-item:hover img {
+            transform: scale(1.05);
+        }
+        
+        @media (max-width: 992px) {
+            .hero-images-only {
+                grid-template-columns: 1fr;
+                gap: 10px;
+            }
+            .hero-img-item {
+                height: 350px;
+            }
+        }
+    </style>
 </head>
 <body>
 
@@ -69,35 +106,22 @@
 	</header>
 	<!-- Header End -->
    
-    <!-- Staggered Editorial Hero Section Start (Image Section 1) -->
-    <section class="hero-staggered">
-        <div class="container">
-            <div class="hero-grid">
-                <!-- Left: Ochre Banner Grid Panel -->
-                <div class="hero-left-panel" data-reveal="left">
-                    <img src="assets/img/hero.jpg" alt="Student reading book at study desk">
-                    <h1>Calibrating spaces for focus</h1>
-                </div>
-                
-                <!-- Right: Text & Active Stats Panel -->
-                <div class="hero-right-panel" data-reveal="right">
-                    <span>Academic Design Studio</span>
-                    <p>We analyze table clearance heights, task lighting lux counts, and noise isolation coefficients to construct peak cognitive study environments.</p>
-                    
-                    <div class="hero-stats-box">
-                        <h4>Cognitive Zones</h4>
-                        <p class="mb-0" style="font-size: 14px; opacity: 0.9;">We space library desk cubicles at exactly one hundred and twenty centimeters to keep student focus loops clean.</p>
-                    </div>
-                    
-                    <div class="d-flex gap-3 mt-4">
-                        <a href="contact.html" class="btn-default">Book Atelier Plan</a>
-                        <a href="blog.html" class="btn-default" style="background: transparent; border: 1px solid var(--border-color); color: var(--text-color);">Read Wear Logs</a>
-                    </div>
-                </div>
-            </div>
+    <!-- Fullscreen Pure Image Hero Showcase Start (Image Section 1 - Text Removed) -->
+    <section class="hero-images-only">
+        <!-- Image 1 -->
+        <div class="hero-img-item" data-reveal="left">
+            <img src="assets/img/hero.jpg" alt="Student reading book at study desk">
+        </div>
+        <!-- Image 2 -->
+        <div class="hero-img-item" data-reveal="zoom">
+            <img src="assets/img/coll_1.jpg" alt="Vintage book library archives room">
+        </div>
+        <!-- Image 3 -->
+        <div class="hero-img-item" data-reveal="right">
+            <img src="assets/img/coll_2.jpg" alt="Stack of vintage books study setup">
         </div>
     </section>
-    <!-- Staggered Editorial Hero End -->
+    <!-- Fullscreen Pure Image Hero Showcase End -->
 
     <!-- Academic Pillars Section Start (Slanted Borders & Image Section 2) -->
     <section class="pillars-section">
@@ -160,7 +184,7 @@
                 <!-- Card 3 -->
                 <div class="station-card" data-reveal="zoom">
                     <div class="station-circle">
-                        <img src="assets/img/coll_1.jpg" alt="Vintage book library archives room">
+                        <img src="assets/img/coll_3.jpg" alt="Desk study lamp workstation">
                     </div>
                     <h3>Book Archive Rooms</h3>
                     <p>Tall shelf racks set with LED underlights to illuminate spine labels without creating screen glares.</p>
