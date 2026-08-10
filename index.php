@@ -50,6 +50,54 @@
             transform: scale(1.05);
         }
 
+        /* Image & Text Split Section */
+        .split-img-text {
+            padding: 100px 0;
+            background: var(--bg-color);
+            border-bottom: 1px solid var(--border-color);
+        }
+        .split-row {
+            display: flex;
+            align-items: center;
+            gap: 60px;
+        }
+        .split-col-img {
+            flex: 1;
+            overflow: hidden;
+            border-radius: 4px;
+            border: 1px solid var(--border-color);
+            height: 480px;
+        }
+        .split-col-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .split-col-text {
+            flex: 1;
+        }
+        .split-col-text span {
+            font-size: 12px;
+            font-weight: 700;
+            color: var(--accent-ochre);
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            display: block;
+            margin-bottom: 15px;
+        }
+        .split-col-text h2 {
+            font-family: var(--font-serif);
+            font-size: 36px;
+            color: var(--accent-color);
+            margin-bottom: 25px;
+        }
+        .split-col-text p {
+            font-size: 16px;
+            line-height: 1.8;
+            color: var(--text-color);
+            margin-bottom: 30px;
+        }
+
         /* Methodology Section */
         .cognitive-methodology {
             padding: 100px 0;
@@ -134,6 +182,14 @@
             }
             .hero-img-item {
                 height: 350px;
+            }
+            .split-row {
+                flex-direction: column;
+                gap: 30px;
+            }
+            .split-col-img {
+                height: 300px;
+                width: 100%;
             }
             .methodology-grid {
                 grid-template-columns: 1fr;
@@ -236,6 +292,27 @@
         </div>
     </section>
     <!-- Academic Pillars End -->
+
+    <!-- Image & Text Split Section Start -->
+    <section class="split-img-text">
+        <div class="container">
+            <div class="split-row">
+                <!-- Left: Framed Book Image -->
+                <div class="split-col-img" data-reveal="left">
+                    <img src="assets/img/prod_4.jpg" alt="Open book pages close-up layout">
+                </div>
+                
+                <!-- Right: Content Details -->
+                <div class="split-col-text" data-reveal="right">
+                    <span>Spatial Anatomy</span>
+                    <h2>Designed for cognitive efficiency.</h2>
+                    <p>We structure school classrooms, library study nooks, and individual writing tables to secure deep focus. By calibrating table depths, LED diffusion spreads, and decibel absorption rates, student minds are completely shielded from visual phone prompts and corridor noises.</p>
+                    <a href="about.html" class="btn-default">Learn About Atelier</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Image & Text Split Section End -->
 
     <!-- New Section A: The Cognitive Methodology Start -->
     <section class="cognitive-methodology">
